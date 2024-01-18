@@ -1,0 +1,27 @@
+.delete-b{
+    background-color: rgb(246, 152, 123);
+    font-size: large;
+    font-weight: 800;
+    border-radius: 15px;
+    margin-right: 300px;
+    padding: 5px 12px ;
+}
+
+.todo-cont{
+    font-size:large;
+}
+
+.todo-check {
+    margin-left: 300px;
+    margin-right: 10px;
+    transform: scale(1.5);
+  }
+  
+.todo-check:checked {
+    background-color: lightgreen;
+  }
+
+.todo-item{
+    display: flex;
+    justify-content: space-between;
+}

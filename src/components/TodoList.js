@@ -8,12 +8,12 @@ function TodoList() {
   const [tasks, setTasks] = useState([
     {
       id: 1,
-      text: "Doctor Appointment",
+      text: "React basics",
       completed: true,
     },
     {
       id: 2,
-      text: "Meeting at School",
+      text: "To do app",
       completed: false,
     },
   ]);
@@ -22,17 +22,19 @@ function TodoList() {
 
   const [text, setText] = useState("");
   function addTask(text) {
+    if(text!=''){
     const newTask = {
       id: Date.now(),
       text,
       completed: false,
     };
     setTasks([ newTask,...tasks]);
-    setText("");
+    setText("");}
   }
   function deleteTask(id) {
     setTasks(tasks.filter((task) => task.id !== id));
   }
+  
   function toggleCompleted(id) {
     setTasks(
       tasks.map((task) => {
@@ -43,10 +45,11 @@ function TodoList() {
         }
       })
     );
+    console.log(tasks);
   }
   return (
     <div className="todo-list">
-      <input className="ipfield" value={text} onChange={(e) => setText(e.target.value)} />
+      <input className="ipfield" name="new-todo" placeholder="Enter your to-do task" value={text} onChange={(e) => setText(e.target.value)} />
       <button className="ipbutton" onClick={() => addTask(text)}>Add</button>
       {tasks.map((task) => (
         <TodoItem
