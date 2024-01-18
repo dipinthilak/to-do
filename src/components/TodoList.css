@@ -1,0 +1,17 @@
+.ipbutton{
+    margin-top: 35px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    background-color: white;
+    color: rgb(34, 108, 255);
+    font-weight: bold;
+    padding: 7px 15px 7px 15px;
+    border-radius: 7px;
+    border-color: rgb(128, 128, 128);
+}
+
+.ipfield{
+    padding: 7px 15px 7px 15px;
+    border-radius: 7px;
+    border-color: rgb(61, 61, 61);
+}
